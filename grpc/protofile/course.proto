@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "grpc/pc";
+
+message Course {
+  string name = 1;
+}
+
+message CourseResult {
+  string id = 1;
+  string name = 2;
+}
+
+service CourseService {
+  rpc CreateCourse(Course) returns (CourseResult) {};
+}
